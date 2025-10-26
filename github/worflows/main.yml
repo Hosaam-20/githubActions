@@ -1,0 +1,29 @@
+name: workflow for push and pull request
+
+on:
+  push:
+    branches:
+      - main
+      - "feat/**"
+
+    path:
+      - "src/**"
+
+  pull_request:
+    branches:
+      - main
+      - "feat/**"
+
+jobs:
+  test:
+  runs-on: ubuntu-latest
+  
+  steps:
+
+  - name: checkout repo
+    uses: checkout@v5
+
+  - name: print message
+    run: echo "push or pull request was run successfully!"
+
+
