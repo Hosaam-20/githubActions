@@ -5,3 +5,4 @@ function greet(name){
 
 
 greet("Hussam")
+greet(122)
