@@ -25,5 +25,3 @@ jobs:
 
     - name: print message
       run: echo "push or pull request was run successfully!"
-
-
