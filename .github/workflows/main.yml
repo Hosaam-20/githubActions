@@ -21,7 +21,7 @@ jobs:
    steps:
 
     - name: checkout repo
-      uses: checkout@v5
+      uses: actions/checkout@v5
 
     - name: print message
       run: echo "push or pull request was run successfully!"
