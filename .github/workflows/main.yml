@@ -6,7 +6,7 @@ on:
       - main
       - "feat/**"
 
-    path:
+    paths:
       - "src/**"
 
   pull_request:
@@ -15,15 +15,15 @@ on:
       - "feat/**"
 
 jobs:
-  test:
-  runs-on: ubuntu-latest
+  build:
+   runs-on: ubuntu-latest
   
-  steps:
+   steps:
 
-  - name: checkout repo
-    uses: checkout@v5
+    - name: checkout repo
+      uses: checkout@v5
 
-  - name: print message
-    run: echo "push or pull request was run successfully!"
+    - name: print message
+      run: echo "push or pull request was run successfully!"
 
 
