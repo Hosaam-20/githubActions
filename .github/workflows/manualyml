@@ -1,0 +1,22 @@
+name: manual deploy
+
+on:
+  workflow_dispatch:
+    inputs:
+      enviroment:
+        description: "choose the enviroment"
+        type: choice
+        default: staging
+        required: true
+        options:
+          - staging
+          - production
+          - development 
+
+jobs:
+  deploy:
+    runs-on: ubuntu latest
+    steps:
+      - name: send message
+        run: echo "deploy on ${{ inputs.options }}" 
+    
